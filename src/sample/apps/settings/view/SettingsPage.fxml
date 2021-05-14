@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.apps.settings.view.SettingsPageController">
+   <children>
+      <GridPane layoutX="123.0" layoutY="65.0" prefHeight="91.0" prefWidth="254.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="78.0" text="Last Seen:">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="109.0" text="Account Privacy:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="lastSeenBox" prefWidth="150.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="accountPrivacyBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="deactivateAccountBtn" layoutX="183.0" layoutY="226.0" mnemonicParsing="false" onAction="#deactivateAccount" text="Deativate Account">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteAccountBtn" layoutX="193.0" layoutY="265.0" mnemonicParsing="false" onAction="#deleteAccount" text="Delete Account">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutBtn" layoutX="214.0" layoutY="303.0" mnemonicParsing="false" onAction="#logout" text="Log Out">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="210.0" layoutY="21.0" prefHeight="18.0" prefWidth="78.0" text="Settings">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Label>
+      <GridPane hgap="10.0" layoutX="27.0" layoutY="175.0" prefHeight="30.0" prefWidth="446.0" AnchorPane.rightAnchor="26.600000000000023">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="oldPassTxt" promptText="Old password" />
+            <TextField fx:id="newPassTxt" promptText="New password" GridPane.columnIndex="1" />
+            <Button fx:id="changePassBtn" mnemonicParsing="false" onAction="#changePassword" prefHeight="24.0" prefWidth="126.0" text="Change Password" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Constantia" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="23.0" layoutY="347.0" prefHeight="28.0" prefWidth="450.0" textFill="RED">
+         <font>
+            <Font name="Constantia" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

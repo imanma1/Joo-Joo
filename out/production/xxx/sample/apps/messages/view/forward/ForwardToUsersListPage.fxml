@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.apps.messages.view.forward.ForwardToUsersListPageController">
+   <bottom>
+      <AnchorPane prefHeight="35.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="433.0" layoutY="6.0" mnemonicParsing="false" onAction="#forward" text="Forward">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="sentLabel" layoutX="397.0" layoutY="10.0" text="sent!">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <ListView fx:id="listView" prefWidth="487.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
